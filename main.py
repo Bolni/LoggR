@@ -8,7 +8,7 @@ import datetime
 with open('/var/log/syslog') as f:
     for line in f:
         print(line)
-        m = re.match(r'(\d)\s(\w+\s{1,}\d{1,}\s\d{2}:\d{2}:\d{2})\s(.+)\s(\w+)\[(\d+)\]:\s(.+)', line)
+        m = re.match(r'(\d)\,\d\,(\w{1,}\s\d{1,}\s\d{2}:\d{2}:\d{2})\,(.+)\,(\w+)\[(\d+)\]:\,\s(.+)', line)
         print(m)
         now = datetime.datetime.now()
         if m:
