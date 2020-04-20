@@ -1,0 +1,18 @@
+{
+  "name": "loggr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/bootstrap": "^3.3.36",
+    "@types/jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "watchify": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "static": "watchify js/admin.js -o js/admin.out.js --debug -v"
+  },
+  "author": "Molnár Bálint"
+}

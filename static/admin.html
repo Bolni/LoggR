@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Loggr</title>
+    </head>
+    
+    <body class = "body">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">LoggR</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Levels <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="divider"></li>  
+                <li><a><input class="filter" type="checkbox" value="Emergency"> Emergency<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Alert"> Alert<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Critical"> Critical<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Error"> Error<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Warning"> Warning<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Notice"> Notice<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Info"> Info<br></a></li>
+                <li><a><input class="filter" type="checkbox" value="Debug"> Debug<br></a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="jumbotron text-center">
+      <h1>LoggR</h1>
+      <p>Welcome to the admin page!</p>
+    </div><!-- /.text-center -->
+    <hr>
+    <canvas id="myChart" width="200" height="50"></canvas>
+    <hr>
+    <br>
+    <br>
+    <div>
+
+    <Table id="users_table" class="table">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    </Table>   
+
+    <Table id="logs_table" class="table">
+      <thead>
+      <tr>
+        <th>Level</th>
+        <th>Computer name</th>
+        <th>Date</th>
+        <th>Process name</th>
+        <th>ProcessID</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+    </tbody>
+    </Table>
+    </div>
+      <script src="/static/js/admin.out.js"></script>
+    </body>
+  </html>
